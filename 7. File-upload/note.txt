@@ -1,0 +1,5 @@
+Cannot read property 'pick' of undefined in iOS only, working in android 
+cd ios
+npx pod-install
+cd ..
+npm run ios

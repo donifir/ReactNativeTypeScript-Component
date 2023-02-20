@@ -1,0 +1,64 @@
+umum 
+1.install react navigation seperti biasa
+
+
+tambahan typescrip
+1. https://reactnavigation.org/docs/stack-navigator
+2. install npm install @react-navigation/stack
+3. import import 'react-native-gesture-handler'; di app.js
+4. install npm install @react-native-masked-view/masked-view
+5. npx pod-install ios
+
+
+coding biasa
+1.tambahhan folder2 untuk navigation
+2. "app.tsx" link ke navigation
+3. membuat type route
+4. mebuat stack navigator dengan  const RootStack = createStackNavigator<RootStackParamList>();
+
+link navigation contoh di homescreen yang ada "btn ke detail produk"
+1. membuat param navigation 
+    const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+2. tambahkan 
+    onPress={()=>navigation.navigate('AboutScreen')} // seperti biasa
+
+dengan menambahkan routevparameter
+  1. buat 
+      -type Props = NativeStackScreenProps<RootStackParamList,"ProductScreen">;
+      -ProductScreen adalah nama route halamanya atau sreenya sendiri 
+  2. dalam arrow di tambah kan 
+      -{navigation}:Props
+      example
+        -const ProductScreen = ( {navigation}:Props) => {
+  3. dalam onPress
+      -onPress={() => navigation.navigate('DetailProductScreen',{name:'sandal produck'})}
+
+penerima  routevparameter
+  4. penmabahan identifikasi route screen sendiri 
+    -type Props = NativeStackScreenProps<RootStackParamList,"DetailProductScreen">
+  5. dalam arrow funtion ditambahkan "{route}:Props"
+    example
+    -const DetailProduckScreen= ({route}:Props)  => {
+  6. pemanggilan route 
+    -<Text>{route.params.name}</Text>
+
+
+tambahan component btn yang didalamnya ada link
+1. penambahan 
+  -const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+2. pemanggilan component dan pengiriman Props
+  <ButtonComponent label="About dari component"link="AboutScreen" onPress={() => { navigation.navigate('AboutScreen')}}/>
+3.dalam component ditambahkan type
+    type Props = {
+    label:string;
+    link:string;
+    onPress: (name:string) => void
+  }
+4. penambahan
+  const ButtonComponent:FC<Props> = ({label,link,onPress}) => {
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
+5. dalam tauchable 
+    <TouchableOpacity style={styles.wrapper} onPress={()=>onPress(link)}>
+      <Text>{label}</Text>
+    </TouchableOpacity>

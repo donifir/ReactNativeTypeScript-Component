@@ -1,0 +1,13 @@
+1. kunjungi : https://www.appicon.co/
+    -upload gambar 
+    -download gambar
+
+1. ios
+    -buka xcode 
+    -open project -> ios -> "nama project" -> "nama project" -> images
+    - drag and drop logo sesuai ukuruan file 
+
+2. android
+    -open project ->android ->app ->src ->main -> res 
+    -replace all file and folder mimpmap
+
