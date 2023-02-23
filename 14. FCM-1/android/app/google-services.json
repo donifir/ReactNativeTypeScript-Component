@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "330534073250",
+    "project_id": "notiftsx",
+    "storage_bucket": "notiftsx.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330534073250:android:f25864994625975febf8fb",
+        "android_client_info": {
+          "package_name": "com.awesomeproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "330534073250-306dafk9gjlbjosn8phaqtr9h6t952hd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIl2en2h8IAZ_nvcKQV9K8_chs6xEenfs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "330534073250-306dafk9gjlbjosn8phaqtr9h6t952hd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
