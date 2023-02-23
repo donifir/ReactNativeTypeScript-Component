@@ -1,0 +1,61 @@
+Firebase
+-kunjungi https://firebase.google.com/?hl=id
+  ->Go to console
+  ->addProject
+  ->masukan nama dll
+
+  ->masuk dan pilih app android
+  ->masukan form name package ambil di android/app/src/reales (ex: com.awesomeproject)
+  ->download google-service.json (step-2)
+    ->ditaruh di folder android->app
+  ->ikuti perintah (step 3)
+    ->ditaruh di android buil.gradle
+      classpath 'com.google.gms:google-services:4.3.15'
+    ->ditaruh di android/app buil.gradle
+      id 'com.google.gms.google-services'
+       diubah jadi
+        ->apply plugin: "com.google.gms.google-services"
+  ->next goto console
+
+Raect native firebase
+  -> kunjungi https://rnfirebase.io/
+    -> yarn add @react-native-firebase/app
+  ->ke menu cloud messagin
+    ->install firebase app (jika belum)
+    ->install firabese massaging (jika belum)
+  -> tambahkan requestPermission 
+    ->paste code di app.tsx
+
+install 
+  ->yarn add @react-native-firebase/messaging
+
+-> tambahkan function get token
+  ->lihat di app.tsx get token
+
+
+
+  tes meggsage firebase
+  ->goto firebase console
+  ->cloud messaging
+  ->engeage
+  ->messaging
+
+  ->create
+  ->Firebase Notification messages
+  ->copy token dari terminal
+  ->title -isi
+  ->send message ->isi dengan token
+
+  ->pergi kehalaman firebase -> cloyd messaging->usesage
+    ->Foreground state messages
+    ->copy dan paste di useEffect app.tsx
+    ->Handling Interaction dokumentasi untuk fourgrodund atau background
+
+    untuk minimise dan navigate saat notif di klik
+    messaging().onNotificationOpenedApp(remoteMessage => {
+      console.log(
+        'Notification caused app to open from background state:',
+        remoteMessage.notification,
+      );
+      navigation.navigate(remoteMessage.data.type);
+    });
