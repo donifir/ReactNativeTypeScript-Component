@@ -1,0 +1,15 @@
+The Android Gradle plugin supports only kotlin-android-extensions Gradle plugin version 1.6.20 and higher
+
+
+I added this in android/build.gradle:
+
+buildscript {
+    ext {
+          [...]
++        kotlinVersion = "1.6.20"
+    }
+    [...]
+}
+https://github.com/mrousavy/react-native-vision-camera/issues/1431
+
+----------------------------------------

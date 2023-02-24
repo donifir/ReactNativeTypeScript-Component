@@ -1,0 +1,28 @@
+https://mrousavy.com/react-native-vision-camera/docs/guides/
+  install 
+    ->npm i react-native-vision-camera
+  add Code uses-permission (ex AndroidManifest.xml)
+
+add kotlin  (ex/android/buildGrandle)
+  kotlinVersion = "1.6.20"
+
+install react-native-reanimated
+  ->yarn add react-native-reanimated
+    https://mrousavy.com/react-native-vision-camera/docs/guides/
+  ->yarn start --reset-cache
+
+install vision-camera-code-scanner
+  ->yarn add vision-camera-code-scanner
+    https://github.com/rodgomesc/vision-camera-code-scanner
+  ->import on index
+    import 'react-native-reanimated'
+
+edit babel.confiq.js
+    plugins: [
+    [
+      "react-native-reanimated/plugin",
+      {
+        "globals": ["__scanCodes"],
+      },
+    ],
+  ],
