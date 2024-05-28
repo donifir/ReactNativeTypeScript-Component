@@ -33,7 +33,7 @@ cd android
 	gradlew assembleRelease && gradlew bundleRelease	
 
 	android->app->bild->output->apk->realis //apk
-	android->app->bild->output->build->realis //aab
+	android->app->bild->output->bundle->realis //aab
 
 
 
